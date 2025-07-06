@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Jha - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="achievements.html" class="nav-link">Achievements</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image fade-in fade-delay-1">
+                <img src="pfp.jpg" alt="Shashank Jha Profile Picture"> <!-- Replace with your own image -->
+            </div>
+            <h1 class="name fade-in fade-delay-2">Shashank Jha</h1>
+            <div class="hero-buttons fade-in fade-delay-3">
+                <button class="btn btn-primary" id="aboutMeBtn">About me</button>
+                <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Contact</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-header">
+                <div class="about-icon">
+                    <img src="circle-user.png" alt="About Me Icon" width="40" height="40"> <!-- Replace with your own image if needed -->
+                </div>
+                <h2>About me</h2>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    Hi! I'm Shashank Jha. I live in the United States. I started coding with Scratch at the age of 6 and moved into programming at 9. I now work with HTML, CSS, JavaScript, Node.js, and MongoDB. I'm also deeply passionate about cybersecurity — I've completed several courses and earned my <strong>CompTIA Security+ certification</strong>. My main focus is web development. As a side hobby, I enjoy going to the gym, wrestling, graphic design, and photography.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="html.png" alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="css.png" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="javascript.png" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="nodejs.webp" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="mongodb.png" alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("aboutMeBtn").addEventListener("click", function () {
+                document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shashank Jha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="achievements.html" class="nav-link">Achievements</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+    </nav>
+    <section class="contact-page">
+        <div class="contact-container">
+            <h1 class="contact-title contact-fade-in contact-fade-delay-1">Contact</h1>
+            <div class="contact-grid contact-fade-in contact-fade-delay-2">
+                <!-- Email card removed as requested -->
+                <div class="contact-card" onclick="copyToClipboard('frostedcoffee', 'discord')">
+                    <div class="contact-card-header">
+                        <img src="start.webp" alt="Discord Icon" width="32" height="32"> <!-- Replace with your own image if needed -->
+                        <span class="contact-label">Discord</span>
+                    </div>
+                    <div class="contact-card-value">frostedcoffee</div>
+                </div>
+                <div class="contact-card" onclick="window.open('https://github.com/ShashankJhaGit', '_blank')">
+                    <div class="contact-card-header">
+                        <img src="githubimage.png" alt="GitHub Icon" width="32" height="32"> <!-- Replace with your own image if needed -->
+                        <span class="contact-label">GitHub</span>
+                    </div>
+                    <div class="contact-card-value">ShashankJhaGit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clipboard notification -->
+    <div id="clipboard-notification" class="clipboard-notification">
+        <p>Copied to clipboard!</p>
+    </div>
+
+    <style>
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .contact-card {
+        background: #111;
+        border: 1.5px solid #333;
+        border-radius: 16px;
+        padding: 2rem 2rem 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: box-shadow 0.2s, border-color 0.2s;
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    }
+    .contact-card:hover {
+        border-color: #555;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    }
+    .contact-card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .contact-label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+    .contact-card-value {
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: 'Poppins', Arial, sans-serif;
+        word-break: break-all;
+    }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
